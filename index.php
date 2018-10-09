@@ -8,9 +8,9 @@ $sUrlPath = $_SERVER['REQUEST_URI'];
 // Vérifie si l'url commence par /files/ et l'index === 0.
 $dSearchPos = strpos($sUrlPath, $sUploadPath);
 if ($dSearchPos !== false && $dSearchPos === 1) {
-  // Supprimer le premier slash /
+
   $sFilePath = trim($sUrlPath, '/');
-  // on récupère le contenu du fichier
+
   $sFileContent = @file_get_contents($sFilePath);
 
   if (empty($sFileContent)) {
@@ -24,7 +24,7 @@ if ($dSearchPos !== false && $dSearchPos === 1) {
   header('Content-Type: ' . $sFileContentType);
   // on affiche le contenu du fichier (une image)
   echo $sFileContent;
-  // on arrête l'execution du code.
+
   exit();
 }
 
@@ -52,6 +52,7 @@ if (!empty($_POST) && !empty($_FILES)) {
   $sMimeType = mime_content_type($sFilePath);
   // File Extension
   $sFileExtension = pathinfo($sFileName, PATHINFO_EXTENSION);
+  // File change name
   $sFileNameUUID = md5(time() .uniqid('filename_')) . '.' . $sFileExtension;
 
   // Check: MimeType, FileSize
@@ -62,7 +63,7 @@ if (!empty($_POST) && !empty($_FILES)) {
     echo 'fail size fail';
     exit();
   } else {
-    // Privilège
+    // Privilège lors de l'ajout
     $sDestination = $sUploadPath . $sFileNameUUID;
     move_uploaded_file($sFilePath, $sDestination);
     chmod($sDestination, 0744);

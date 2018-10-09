@@ -1,5 +1,7 @@
 # File upload
 
+Project to secure an image upload (jpeg/jpg/png) with php
+
 ## Installation mkcert
 
 - `$ mkcert -install`
@@ -27,4 +29,4 @@ The certificate is at "./example.com+5.pem" and the key at "./example.com+5-key.
 
 if you installed dependencies & mkcert you can now run the project with : 
 
-`$ php -S localhost:8000 index.php`
+`php -S localhost:8000 index.php`
