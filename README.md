@@ -2,11 +2,27 @@
 
 ## Installation
 
-install mkcert with:
-- `brew install mkcert`(on mac of you're using antoher OS go at this website : https://github.com/FiloSottile/mkcert)
+install mkcert : https://github.com/FiloSottile/mkcert
+
 - `$ mkcert -install`
-with your own configurations:
-- `$ mkcert example.com '*.example.org' myapp.dev localhost 127.0.0.1 ::1`
+
+Created a new local CA at "/Users/filippo/Library/Application Support/mkcert" 💥
+The local CA is now installed in the system trust store! ⚡️
+The local CA is now installed in the Firefox trust store (requires restart)! 🦊
+
+`$ mkcert example.com '*.example.org' myapp.dev localhost 127.0.0.1 ::1`
+
+Using the local CA at "/Users/filippo/Library/Application Support/mkcert" ✨
+
+Created a new certificate valid for the following names 📜
+ - "example.com"
+ - "*.example.org"
+ - "myapp.dev"
+ - "localhost"
+ - "127.0.0.1"
+ - "::1"
+
+The certificate is at "./example.com+5.pem" and the key at "./example.com+5-key.pem" ✅
 
 ### Requirements
 * php
