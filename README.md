@@ -2,6 +2,12 @@
 
 Project to secure an image upload (jpeg/jpg/png) with php
 
+## Installation project
+
+- install node v8.9.4
+- git clone
+- npm install
+
 ## Installation mkcert
 
 - `$ mkcert -install`
