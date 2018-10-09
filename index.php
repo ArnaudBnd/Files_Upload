@@ -66,6 +66,11 @@ if (!empty($_POST) && !empty($_FILES)) {
     echo 'fail size fail';
     exit();
   } else {
+    // Privilège
+    $sDestination = $sUploadPath . $sFileNameUUID;
+    move_uploaded_file($sFilePath, $sDestination);
+    chmod($sDestination, 0744);
+
     echo 'file upload </br>';
     move_uploaded_file($sFilePath, 'files/' . $sFileNameUUID);
     echo '<a href="'.$sUploadPath . $sFileNameUUID.'" target="_blank">open img</a>';
