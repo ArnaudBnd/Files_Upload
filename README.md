@@ -1,8 +1,6 @@
 # File upload
 
-## Installation
-
-install mkcert : https://github.com/FiloSottile/mkcert
+## Installation mkcert
 
 - `$ mkcert -install`
 

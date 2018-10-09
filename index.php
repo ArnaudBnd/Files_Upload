@@ -42,10 +42,6 @@ if (!empty($_POST) && !empty($_FILES)) {
     exit();
   }
 
-  echo '<pre>';
-  print_r($_FILES);
-  echo '</pre>';
-
   // File name
   $sFileName = $_FILES['file']['name'];
   // File path
